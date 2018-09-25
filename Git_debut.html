@@ -1,6 +1,6 @@
 Git tutoriel : basics commands to get by. (information from the course of Laurent Reveillere)
 
-------------------------------
+--------------------------------------------------
 
 git add "filename"
 git add . : to add all the files in the folder
@@ -14,14 +14,14 @@ git checkout SHAofthecommit : to go to the commit corresponding to the given SHA
 git commit --amend -m "message" : change the message of the last commit
 git reset --hard : to undo all the changes that have not benn committed yet
 
-------------------
+------------------------------------------------------
 
 git push origin master
 git push : add updates to the global repository
 git pull @ : get the last updates from global repository (=from Github)
 
 
---------------------
+-----------------------------------------------------
 Branchs
 
 git branch : see the state of the current structure, with a "*" in front of the branch you are currently in
@@ -33,12 +33,17 @@ git checkout new_branch : move to the branch called new-branch
 --Tip :
 git checkout -b new-branch : creates a new branch and moves into it
 
-To unite two branchs A & B:
+--------------
+
+
+To add changes from branch B to the branch A:
 
 git checkout branchA
 git merge branchB
 
 This is very useful whenever you want to add your branch updates to the master branch.
+
+-------------
 
  --To solve a conflict : 
 Either git pull -> git commit -> git push
@@ -48,7 +53,8 @@ git blame file.ext : Displays the name of the users who have changed the file
 
 git show SHA : displays the changes of the commit corresponding to the given SHA
 
-----------------
+-------------
+
 
 If you're working on a branch1, but one of your colleagues calls you for an emergency to work on an other branch2, it is not a good idea to do a commit, as it would burden your history;
 
