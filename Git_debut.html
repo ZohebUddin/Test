@@ -1,4 +1,4 @@
-Git tutoriel : basics commands to get by.
+Git tutoriel : basics commands to get by. (information from the course of Laurent Reveillere)
 
 ------------------------------
 
@@ -20,8 +20,40 @@ git push origin master
 git push : add updates to the global repository
 git pull @ : get the last updates from global repository (=from Github)
 
---To solve a conflict : 
+
+--------------------
+Branchs
+
+git branch : see the state of the current structure, with a "*" in front of the branch you are currently in
+
+git branch new-branch : creates a new branch called "new-branch"
+
+git checkout new_branch : move to the branch called new-branch
+
+--Tip :
+git checkout -b new-branch : creates a new branch and moves into it
+
+To unite two branchs A & B:
+
+git checkout branchA
+git merge branchB
+
+This is very useful whenever you want to add your branch updates to the master branch.
+
+ --To solve a conflict : 
 Either git pull -> git commit -> git push
 Or edit the local file, then commit again("git commit")
 
-                         
+git blame file.ext : Displays the name of the users who have changed the file
+
+git show SHA : displays the changes of the commit corresponding to the given SHA
+
+----------------
+
+If you're working on a branch1, but one of your colleagues calls you for an emergency to work on an other branch2, it is not a good idea to do a commit, as it would burden your history;
+
+Then, how to keep the changes you have made so far before treting the emergency ?
+You can use : git stash
+Then, go to the emergency branch. Once the problem of branch2 is solved and committed, use : git stash pop to get your updates from branch1 back (Don't forget to commit your changes from branch1 once you have finished !) (pop takes the changes from the stash back)
+
+In order to keep the changes in the stash : git stash apply
