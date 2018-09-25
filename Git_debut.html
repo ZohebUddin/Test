@@ -1,0 +1,16 @@
+Git tutoriel
+
+------------------------------
+
+git add "filename"
+git add . : to add all the files in the folder
+git commit -m "filename" : To commit changes and then to write a message to describe the commit
+git commit -a -m "filename" : To commit all the updates without the need to add the files agin
+
+git log : information about commit history
+
+It is not possible to delete a commit. But there are several ways to "undo" one :
+git checkout SHAofthecommit : to go to the commit corresponding to the given SHA
+git commit --amend -m "filename" : change the message of the last commit
+git reset --hard : to undo all the changes that have not benn committed yet
+
